@@ -1,4 +1,4 @@
-#Nodes markup
+#Frontend Boilerplate
 
 ##2013/08/01 - Version 0.0:
 
