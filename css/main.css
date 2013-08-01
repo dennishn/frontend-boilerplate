@@ -1,0 +1,48 @@
+body:before, body:after {
+  content: " ";
+  display: table;
+}
+body:after {
+  clear: both;
+}
+
+/* CSS3 PIE - IE8 Support */
+.ie-pie {
+  -pie-lazy-init: true;
+  -pie-png-fix: true;
+}
+
+.ie .fb-popup-tpl-overlay {
+  filter: none;
+  -pie-background: rgba(255, 255, 255, 0.6);
+}
+
+.ie8 .fb-popup-tpl-overlay {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+}
+
+@font-face {
+  font-family: "Herp";
+  src: url(/fonts/"Herp-Derp.eot");
+  src: url(/fonts/"Herp-Derp.eot?#iefix") format("embedded-opentype"), url(/fonts/"Herp-Derp.woff") format("woff"), url(/fonts/"Herp-Derp.ttf") format("truetype"), url(/fonts/"Herp-Derp.svg#Herp") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font-family: 'Herp';
+  width: 100%;
+  position: relative;
+}
+@media only screen and (min-width: 810px) {
+  body {
+    width: 810px;
+    overflow-x: hidden;
+    margin: 0 auto;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  body {
+    width: 300px;
+  }
+}
