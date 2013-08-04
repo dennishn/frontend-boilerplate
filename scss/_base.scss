@@ -7,68 +7,12 @@
 // /*******************************************/
 // CONTENTS
 // /*******************************************/
-//   VARIABLES
 //   HELPERS
-
-
-// /*******************************************/
-// $_VARIABLES
-// /*******************************************/
-//  Usage:
-//    .foo {
-//        font-size: $bar;
-//        ...
-//    }
-
-
-// Screen Sizes
-$screen-small: 768px;
-$screen-medium: 1280px;
-$screen-large: 1440px;
-$screen-facebook-desktop: 810px;
-
-// Media Queries
-//  Usage:
-//    .foo {
-//        ...
-//        @media #{(dollarsign)bar} { <- WHY U NO COMPILE
-//            ...
-//        }
-//    }
-
-$media-screen: "only screen";
-$media-small: "only screen and (min-width: #{$screen-small})";
-$media-medium: "only screen and (min-width: #{$screen-medium})";
-$media-large: "only screen and (min-width: #{$screen-large})";
-$media-landscape: "only screen and (orientation: landscape)";
-$media-portrait: "only screen and (orientation: portrait)";
-$media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop})";
 
 
 // /*******************************************/
 // $_HELPERS
 // /*******************************************/
-
-// Placeholders
-//  Usage:
-//    .foo {
-//        @extend %bar;
-//        ...
-//    }
-
-
-// Micro Clearfix
-%cf {
-    &:before,
-    &:after {
-        content: " ";
-        display: table;
-    }
-    &:after {
-        clear: both;
-    }
-}
-
 // Mixins
 //  Usage:
 //    .foo {
@@ -76,6 +20,12 @@ $media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop
 //        ...
 //    }
 
+// Micro Clearfix
+@mixin clearfix() {
+  *zoom:1;
+  &:before, &:after { content: " "; display: table; }
+  &:after { clear: both; }
+}
 
 // Facebook App dimensions
 @mixin facebook-app() {
@@ -122,7 +72,64 @@ $media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop
     }
 }
 
+// Functions
+
+// It strips the unit of measure and returns it
+@function strip-unit($num) {
+  @return $num / ($num * 0 + 1);
+}
+
+// Converts "px" to "em" using the ($)em-base
+@function convert-to-em($value)  {
+  $value: strip-unit($value) / strip-unit($em-base) * 1em;
+  @if ($value == 0em) { $value: 0; } // Turn 0em into 0
+  @return $value;
+}
+
+// Working in ems is annoying. Think in pixels by using this handy function, emCalc(#)
+// Just enter the number, no need to mention "px"
+@function emCalc($values...) {
+  $max: length($values); // Get the total number of parameters passed
+
+  // If there is only 1 parameter, then return it as an integer.
+  // This is done because a list can't be multiplied or divided even if it contains a single value
+  @if $max == 1 { @return convert-to-em(nth($values, 1)); }
+
+  $emValues: (); // This will eventually store the converted $values in a list
+  @for $i from 1 through $max {
+    $emValues: append($emValues, convert-to-em(nth($values, $i)));
+  }
+  @return $emValues;
+}
+
+
+
 // General Styles
+
+// Box Sizing - For grids etc.
+*,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+}
+ body {
+    padding: 0;
+    margin: 0;
+    line-height: 1; // Set to $base-line-height to take on browser default of 150%
+    position: relative;
+}
+img, object, embed {
+    max-width: 100%;
+    height: auto;
+}
+object, embed {
+    height: 100%;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+    display: inline-block;
+    vertical-align: middle;
+}
 
 /* CSS3 PIE - IE8 Support */
 .ie-pie {

@@ -1,0 +1,49 @@
+/*
+ * Base styling. example: link base styling, base font size etc.
+ *
+ * @author Full Name of Author <author@email.com>
+ * @version yyy-mm-dd (Date of latest edit)
+ */
+
+ /*******************************************/
+/* CONTENTS */
+/*******************************************/
+/*
+* RESET Reset default browser styling
+* SHARED Shared elements across modules and layout
+* MAIN html, body
+* LAYOUT header, footer, wrapper, etc.
+*/
+
+// Screen Sizes
+$screen-small: 768px;
+$screen-medium: 1280px;
+$screen-large: 1440px;
+$screen-facebook-desktop: 810px;
+
+// Media Queries
+$media-screen: "only screen";
+$media-small: "only screen and (min-width: #{$screen-small})";
+$media-medium: "only screen and (min-width: #{$screen-medium})";
+$media-large: "only screen and (min-width: #{$screen-large})";
+$media-landscape: "only screen and (orientation: landscape)";
+$media-portrait: "only screen and (orientation: portrait)";
+$media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop})";
+
+// Typography
+$base-font-size: 100% !default;
+$base-line-height: 150% !default;
+$em-base: 16 !default;
+$text-direction: ltr !default;
+
+// NOTE: No need to change this conditional statement, $text-direction variable controls it all.
+$default-float: left !default;
+$opposite-direction: right !default;
+@if $text-direction == ltr {
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
+}
+
