@@ -856,159 +856,157 @@ img {
 * MAIN html, body
 * LAYOUT header, footer, wrapper, etc.
 */
-@media only screen {
-  .display {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: 62.5em;
-    *zoom: 1;
-  }
-  .display:before, .display:after {
-    content: " ";
-    display: table;
-  }
-  .display:after {
-    clear: both;
-  }
-  .display .nest {
-    width: auto;
-    margin-left: -0.9375em;
-    margin-right: -0.9375em;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: none;
-    *zoom: 1;
-  }
-  .display .nest:before, .display .nest:after {
-    content: " ";
-    display: table;
-  }
-  .display .nest:after {
-    clear: both;
-  }
-  .display .nest h6 {
-    width: 100%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 0;
-    margin-bottom: 0;
-    max-width: 62.5em;
-    *zoom: 1;
-  }
-  .display .nest h6:before, .display .nest h6:after {
-    content: " ";
-    display: table;
-  }
-  .display .nest h6:after {
-    clear: both;
-  }
-  .display .a1, .display .a2, .display .a3 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 33.33333%;
-    float: left;
-  }
-  .display .b1 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 75%;
-    float: left;
-  }
-  .display .b1 .b1-1, .display .b1 .b1-2 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 50%;
-    float: left;
-  }
-  .display .b2 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 25%;
-    float: left;
-  }
-  .display .b2 .b2-1 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 25%;
-    float: left;
-  }
-  .display .b2 .b2-2 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 75%;
-    float: left;
-  }
-  .display .c1 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 8.33333%;
-    float: left;
-  }
-  .display .c2 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 75%;
-    margin-left: 16.66667%;
-    float: left;
-  }
-  .display .d1 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 25%;
-    margin-left: auto;
-    margin-right: auto;
-    float: none !important;
-    float: left;
-  }
-  .display .e1 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 16.66667%;
-    left: 83.33333%;
-    right: auto;
-    float: left;
-  }
-  .display .e2 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 83.33333%;
-    right: 16.66667%;
-    left: auto;
-    float: left;
-  }
-  .display .f1, .display .f2 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 33.33333%;
-    float: left;
-  }
-  .display .f3 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 33.33333%;
-    float: left;
-  }
-  .display .f4 {
-    position: relative;
-    padding-left: 0.9375em;
-    padding-right: 0.9375em;
-    width: 33.33333%;
-    float: right;
-  }
+.display {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+.display:before, .display:after {
+  content: " ";
+  display: table;
+}
+.display:after {
+  clear: both;
+}
+.display .nest {
+  width: auto;
+  margin-left: -0.9375em;
+  margin-right: -0.9375em;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: none;
+  *zoom: 1;
+}
+.display .nest:before, .display .nest:after {
+  content: " ";
+  display: table;
+}
+.display .nest:after {
+  clear: both;
+}
+.display .nest h6 {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  max-width: 62.5em;
+  *zoom: 1;
+}
+.display .nest h6:before, .display .nest h6:after {
+  content: " ";
+  display: table;
+}
+.display .nest h6:after {
+  clear: both;
+}
+.display .a1, .display .a2, .display .a3 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
+}
+.display .b1 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 75%;
+  float: left;
+}
+.display .b1 .b1-1, .display .b1 .b1-2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 50%;
+  float: left;
+}
+.display .b2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 25%;
+  float: left;
+}
+.display .b2 .b2-1 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 25%;
+  float: left;
+}
+.display .b2 .b2-2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 75%;
+  float: left;
+}
+.display .c1 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 8.33333%;
+  float: left;
+}
+.display .c2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 75%;
+  margin-left: 16.66667%;
+  float: left;
+}
+.display .d1 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 25%;
+  margin-left: auto;
+  margin-right: auto;
+  float: none !important;
+  float: left;
+}
+.display .e1 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 16.66667%;
+  left: 83.33333%;
+  right: auto;
+  float: left;
+}
+.display .e2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 83.33333%;
+  right: 16.66667%;
+  left: auto;
+  float: left;
+}
+.display .f1, .display .f2 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
+}
+.display .f3 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: left;
+}
+.display .f4 {
+  position: relative;
+  padding-left: 0.9375em;
+  padding-right: 0.9375em;
+  width: 33.33333%;
+  float: right;
 }

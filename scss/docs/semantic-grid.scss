@@ -7,7 +7,7 @@
     "../layout/grid.layout",
     "../themes/project.theme";
 
-@media #{$media-screen} {
+
     .display {
         @include grid-row();
         .nest {
@@ -59,4 +59,4 @@
             @include grid-column(4, $float:right);
         }
     }
-}
+
