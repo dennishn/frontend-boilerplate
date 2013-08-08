@@ -143,6 +143,7 @@ $total-columns: 12 !default;
     }
 
     [class*="column"] + [class*="column"]:last-child { float: $opposite-direction; }
+    [class*="column"] + [class*="column"].non-end { float: $opposite-direction; }
     [class*="column"] + [class*="column"].end { float: $default-float; }
 
     .column.small-centered,
