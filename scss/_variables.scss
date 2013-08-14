@@ -30,6 +30,17 @@ $media-landscape: "only screen and (orientation: landscape)";
 $media-portrait: "only screen and (orientation: portrait)";
 $media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop})";
 
+// Grid Variables
+$include-html-grid-classes: true !default;
+$row-width: emCalc(1000) !default;
+$column-gutter: emCalc(30) !default;
+$total-columns: 12 !default;
+// Block-grid Variables
+$include-html-block-grid-classes: true !default;
+$block-grid-elements: 12 !default;
+$block-grid-default-spacing: emCalc(20) !default;
+$block-grid-media-queries: true !default;
+
 // Typography
 $base-font-size: 100% !default;
 $base-line-height: 150% !default;

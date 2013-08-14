@@ -15,23 +15,19 @@ var Nodes = (function(app, $) {
 	function fallbacks() {
 		Modernizr.load({
 			test : Modernizr.mq('only all'),
-			nope : ['/js/libs/css3-mediaqueries.js']
+			nope : ['/js/vendor/respond.min.js']
 		}, {
 			test : Modernizr.canvas,
-			nope : ['/js/libs/excanvas.js']
+			nope : ['/js/vendor/excanvas.min.js']
 		}, {
  			test: Modernizr.input.placeholder,
- 			nope: ['/js/libs/jquery.placeholder.min.js'],
+ 			nope: ['/js/vendor/jquery.placeholder.min.js'],
  			complete : function() {
  				if (!Modernizr.input.placeholder) {
 					isPlaceholder = true;
  				}
 			}
 		});
-
-		if ($('body').hasClass('ie7') || $('body').hasClass('ie8')) {
-			$('#font-css')[0].href = $('#font-css')[0].href;
-		}
 
 		render();
 	}
@@ -51,9 +47,7 @@ var Nodes = (function(app, $) {
 	}
 
 	function render() {
-		if ($('html').hasClass('cufon-active cufon-ready')) {
-			Cufon.refresh();
-		}
+
 
 		if (window.PIE) {
 			$('.fb-popup-tpl-overlay, .fb-popup-tpl-container, .fb-popup-tpl-footer a.button, .ie-pie').each(function() {

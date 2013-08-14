@@ -20,58 +20,6 @@
 //        ...
 //    }
 
-// Micro Clearfix
-@mixin clearfix() {
-  *zoom:1;
-  &:before, &:after { content: " "; display: table; }
-  &:after { clear: both; }
-}
-
-// Facebook App dimensions
-@mixin facebook-app() {
-    width:100%;
-    position:relative;
-    @media #{$media-facebook-desktop} {
-        width:810px;
-        overflow-x:hidden;
-        margin:0 auto;
-    }
-}
-
-// Font-face
-// Read: http://coding.smashingmagazine.com/2013/02/14/setting-weights-and-styles-at-font-face-declaration/
-// Make sure to define the proper font name, and dont use font-weight / font-style
-//  Usage:
-//    _typography.scss:
-//        @include font-face('Gill-Sans-Regular', 'Gill-Sans-MT-Pro');
-//        -and/or-
-//        @include font-face('Gill-Sans-Light', 'Gill-Sans-MT-Pro-Light');
-//        -and/or-
-//        @include font-face('Gill-Sans-Italic', 'Gill-Sans-MT-Pro-Italic');
-//        -and/or-
-//        @include font-face('Gill-Sans-Bold', 'Gill-Sans-MT-Pro-Bold');
-//        -and/or-
-//        @include font-face('Gill-Sans-Bold-Italic', 'Gill-Sans-MT-Pro-Bold-Italic');
-//        -etc-
-//
-//        h1 {
-//            font-family: Gill-Sans-Bold-Italic;
-//            -etc-
-//        }
-
-@mixin font-face($font-family, $font-filename) {
-    @font-face {
-        font-family: '#{$font-family}';
-        src: url(/fonts/('#{$font-filename}.eot'));
-        src: url(/fonts/('#{$font-filename}.eot?#iefix')) format('embedded-opentype'),
-        url(/fonts/('#{$font-filename}.woff')) format('woff'),
-        url(/fonts/('#{$font-filename}.ttf')) format('truetype'),
-        url(/fonts/('#{$font-filename}.svg##{$font-family}')) format('svg');
-        font-weight: normal;
-        font-style: normal;
-    }
-}
-
 // Functions
 
 // It strips the unit of measure and returns it
