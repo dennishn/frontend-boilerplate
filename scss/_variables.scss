@@ -5,15 +5,20 @@
  * @version yyy-mm-dd (Date of latest edit)
  */
 
- /*******************************************/
-/* CONTENTS */
-/*******************************************/
+/*------------------------------------*\
+    $CONTENTS
+\*------------------------------------*/
+
 /*
-* RESET Reset default browser styling
-* SHARED Shared elements across modules and layout
-* MAIN html, body
-* LAYOUT header, footer, wrapper, etc.
+* $VIEWPORT-BREAKPOINTS 
+* $FONT-SIZES
 */
+
+
+
+/*------------------------------------*\
+    $VIEWPORT-BREAKPOINTS
+\*------------------------------------*/
 
 // Screen Sizes
 $screen-small: 768px;
@@ -30,12 +35,6 @@ $media-landscape: "only screen and (orientation: landscape)";
 $media-portrait: "only screen and (orientation: portrait)";
 $media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop})";
 
-// Typography
-$base-font-size: 100% !default;
-$base-line-height: 150% !default;
-$em-base: 16 !default;
-$text-direction: ltr !default;
-
 // NOTE: No need to change this conditional statement, $text-direction variable controls it all.
 $default-float: left !default;
 $opposite-direction: right !default;
@@ -46,4 +45,43 @@ $opposite-direction: right !default;
   $default-float: right;
   $opposite-direction: left;
 }
+
+
+
+/*------------------------------------*\
+    $FONT-SIZES
+\*------------------------------------*/
+/**
+ * Font-sizes (in ems using emCalc(); function.) Look in _mixins.scss for reference
+ */
+
+
+/**
+ * Base font size used for em referance
+ */
+
+$base-font-size: 100% !default;
+$base-line-height: 150% !default;
+$em-base: 16 !default;
+$text-direction: ltr !default;
+
+/**
+* Font-sizes
+*/
+
+$giga-size:         emCalc(96)!default;
+$mega-size:         emCalc(72)!default;
+$kilo-size:         emCalc(48)!default;
+
+$h1-size:           emCalc(36)!default; // .alpha
+$h2-size:           emCalc(30)!default; // .beta
+$h3-size:           emCalc(24)!default; // .gamma
+$h4-size:           emCalc(20)!default; // .delta
+$h5-size:           emCalc(16)!default; // .epsilon
+$h6-size:           emCalc(14)!default; // .zeta
+
+$milli-size:        emCalc(12)!default;
+$micro-size:        emCalc(10)!default;
+
+
 

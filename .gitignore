@@ -2,4 +2,7 @@
 *.sublime-workspace
 *.sublime-project
 
+# Ignore sass-cache files.
+*.sass-cache
+
 css/styles.css
