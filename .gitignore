@@ -5,4 +5,4 @@
 # Ignore sass-cache files.
 *.sass-cache
 
-css/styles.css
+*css/styles.css

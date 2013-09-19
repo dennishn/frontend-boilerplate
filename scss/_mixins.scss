@@ -5,16 +5,6 @@
  * @version yyy-mm-dd (Date of latest edit)
  */
 
- /*******************************************/
-/* CONTENTS */
-/*******************************************/
-/*
-* RESET Reset default browser styling
-* SHARED Shared elements across modules and layout
-* MAIN html, body
-* LAYOUT header, footer, wrapper, etc.
-*/
-
 
 
 // /*******************************************/
@@ -69,11 +59,11 @@
 @mixin font-face($font-family, $font-filename) {
     @font-face {
         font-family: '#{$font-family}';
-        src: url(/fonts/('#{$font-filename}.eot'));
-        src: url(/fonts/('#{$font-filename}.eot?#iefix')) format('embedded-opentype'),
-        url(/fonts/('#{$font-filename}.woff')) format('woff'),
-        url(/fonts/('#{$font-filename}.ttf')) format('truetype'),
-        url(/fonts/('#{$font-filename}.svg##{$font-family}')) format('svg');
+        src: url(('../fonts/#{$font-filename}.eot'));
+        src: url(('../fonts/#{$font-filename}.eot?#iefix')) format('embedded-opentype'),
+        url(('../fonts/#{$font-filename}.woff')) format('woff'),
+        url(('../fonts/#{$font-filename}.ttf')) format('truetype'),
+        url(('../fonts/#{$font-filename}.svg##{$font-family}')) format('svg');
         font-weight: normal;
         font-style: normal;
     }
@@ -107,6 +97,56 @@
     $emValues: append($emValues, convert-to-em(nth($values, $i)));
   }
   @return $emValues;
+}
+
+
+// Mixin for creating arrows
+
+@mixin arrow($direction, $color, $size){
+    display: block;
+    height: 0;
+    width: 0;
+    
+    @if $direction == 'top' {
+        border-left: $size solid transparent;
+      border-right: $size solid transparent;
+      border-bottom: $size solid $color;
+    } @else if $direction == 'right' {
+        border-top: $size solid transparent;
+        border-bottom: $size solid transparent;
+      border-left: $size solid $color;
+    } @else if $direction == 'bottom' {
+        border-top: $size solid $color;
+        border-right: $size solid transparent;
+        border-left: $size solid transparent;
+    } @else if $direction == 'left' {
+        border-top: $size solid transparent;
+      border-right: $size solid $color;
+      border-bottom: $size solid transparent;
+    } @else if $direction == 'top-left' {
+        border-top: $size solid $color; 
+        border-right: $size solid transparent;  
+    } @else if $direction == 'top-right' {
+        border-top: $size solid $color; 
+        border-left: $size solid transparent;
+    } @else if $direction == 'bottom-left' {
+        border-bottom: $size solid $color; 
+        border-right: $size solid transparent;  
+    } @else if $direction == 'bottom-right' {
+        border-bottom: $size solid $color; 
+        border-left: $size solid transparent;
+    }
+}
+
+@mixin linear-gradient($fromColor, $toColor) {
+  background-color: $toColor; /* Fallback Color */
+  background-image: -webkit-gradient(linear, left top, left bottom, from($fromColor), to($toColor)); /* Saf4+, Chrome */
+  background-image: -webkit-linear-gradient(top, $fromColor, $toColor); /* Chrome 10+, Saf5.1+, iOS 5+ */
+  background-image:    -moz-linear-gradient(top, $fromColor, $toColor); /* FF3.6 */
+  background-image:     -ms-linear-gradient(top, $fromColor, $toColor); /* IE10 */
+  background-image:      -o-linear-gradient(top, $fromColor, $toColor); /* Opera 11.10+ */
+  background-image:         linear-gradient(top, $fromColor, $toColor);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#{$fromColor}', EndColorStr='#{$toColor}');
 }
 
 

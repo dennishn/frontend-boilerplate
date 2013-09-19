@@ -69,19 +69,26 @@ $text-direction: ltr !default;
 * Font-sizes
 */
 
-$giga-size:         emCalc(96)!default;
-$mega-size:         emCalc(72)!default;
-$kilo-size:         emCalc(48)!default;
+
+$giga-size:         emCalc(96)!default; // .giga
+$giga-size-small:   emCalc(96)!default; // .giga
+$mega-size:         emCalc(72)!default; // .mega
+$mega-size-small:   emCalc(72)!default; // .mega
+$kilo-size:         emCalc(48)!default; // .kilo
+$kilo-size-small:   emCalc(48)!default; // .kilo
 
 $h1-size:           emCalc(36)!default; // .alpha
+$h1-size-small:     emCalc(36)!default; // .alpha
 $h2-size:           emCalc(30)!default; // .beta
+$h2-size-small:     emCalc(30)!default; // .beta
 $h3-size:           emCalc(24)!default; // .gamma
+$h3-size-small:     emCalc(24)!default; // .gamma
 $h4-size:           emCalc(20)!default; // .delta
+$h4-size-small:     emCalc(20)!default; // .delta
 $h5-size:           emCalc(16)!default; // .epsilon
+$h5-size-small:     emCalc(16)!default; // .epsilon
 $h6-size:           emCalc(14)!default; // .zeta
-
-$milli-size:        emCalc(12)!default;
-$micro-size:        emCalc(10)!default;
+$h6-size-small:     emCalc(14)!default; // .zeta
 
 
 
