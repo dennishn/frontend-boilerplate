@@ -10,7 +10,7 @@
 \*------------------------------------*/
 
 /*
-* $VIEWPORT-BREAKPOINTS 
+* $VIEWPORT-BREAKPOINTS
 * $FONT-SIZES
 */
 
@@ -35,19 +35,6 @@ $media-landscape: "only screen and (orientation: landscape)";
 $media-portrait: "only screen and (orientation: portrait)";
 $media-facebook-desktop: "only screen and (min-width: #{$screen-facebook-desktop})";
 
-// NOTE: No need to change this conditional statement, $text-direction variable controls it all.
-$default-float: left !default;
-$opposite-direction: right !default;
-@if $text-direction == ltr {
-  $default-float: left;
-  $opposite-direction: right;
-} @else {
-  $default-float: right;
-  $opposite-direction: left;
-}
-
-
-
 /*------------------------------------*\
     $FONT-SIZES
 \*------------------------------------*/
@@ -64,6 +51,8 @@ $base-font-size: 100% !default;
 $base-line-height: 150% !default;
 $em-base: 16 !default;
 $text-direction: ltr !default;
+$sans-regular: 'Helvetica', 'Arial', sans-serif;
+
 
 /**
 * Font-sizes
@@ -91,4 +80,16 @@ $h6-size:           emCalc(14)!default; // .zeta
 $h6-size-small:     emCalc(14)!default; // .zeta
 
 
-
+/*------------------------------------*\
+    $GRID-DIRECTION
+\*------------------------------------*/
+// NOTE: No need to change this conditional statement, $text-direction variable controls it all.
+$default-float: left !default;
+$opposite-direction: right !default;
+@if $text-direction == ltr {
+  $default-float: left;
+  $opposite-direction: right;
+} @else {
+  $default-float: right;
+  $opposite-direction: left;
+}

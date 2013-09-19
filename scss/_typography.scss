@@ -36,7 +36,6 @@ $h6-size:           emCalc(14)!default; // .zeta
 
 html,body{
     font-size: $base-font-size;
-    font-family: $sans-regular;
     line-height: $base-line-height;
 }
 
@@ -48,7 +47,7 @@ h2, .beta {
     font-size: $h2-size;
 }
 
-h3, .gamma {  
+h3, .gamma {
     font-size: $h3-size;
 }
 
