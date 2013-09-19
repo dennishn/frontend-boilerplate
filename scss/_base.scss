@@ -1,0 +1,49 @@
+//  Base settings used in all projects.
+//
+//  @author Dennis Haulund Nielsen <dhni@nodes.dk>
+//  @version 2013-08-01
+
+
+// /*******************************************/
+// CONTENTS
+// /*******************************************/
+
+
+
+*,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+body {
+    padding: 0;
+    margin: 0;
+    line-height: 1; // Set to $base-line-height to take on browser default of 150%
+    position: relative;
+}
+img, object, embed {
+    max-width: 100%;
+    height: auto;
+}
+object, embed {
+    height: 100%;
+}
+img {
+    -ms-interpolation-mode: bicubic;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+/* CSS3 PIE - IE8 Support */
+.ie-pie {
+    -pie-lazy-init:true;
+    -pie-png-fix:true;
+}
+.ie .fb-popup-tpl-overlay {
+    filter:none;
+    -pie-background:rgba(255,255,255,0.6);
+}
+.ie8 .fb-popup-tpl-overlay {
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"
+}
